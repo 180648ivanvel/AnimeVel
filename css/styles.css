@@ -1,0 +1,130 @@
+/*Squeleton*/
+header {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #333;
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+/*Cards */ 
+.anime-card {
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  margin: 15px;
+  width: 230px;
+  overflow: hidden;
+  border-radius: 25px;
+  display: flex;
+  flex-basis: content;
+  transition: all .3s;
+}
+.anime-card-container {
+  background-color: white;
+  transition: all .2s;
+  border-radius: 8px;
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); */
+  padding: 11px;
+  width: 200px;
+  /* overflow: hidden; */
+  transition: transform 0.2s;
+}
+.anime-card:hover {
+ transform: scale(0.98);
+ border-radius: 20px;
+box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+.anime-card-container:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+.anime-card img {
+  width: 100%;
+  height: 280px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.anime-card h3 {
+  font-size: 16px;
+  margin: 10px;
+}
+.anime-card p {
+  font-size: 14px;
+  margin: 10px;
+  color: #555;
+}
+
+/* Modal */
+.modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  transition: all .3s;
+  border-radius: 20px;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh; /* límite de altura: 80% de la pantalla */
+  overflow-y: auto; /* scroll vertical si el contenido excede */
+  text-align: center;
+  position: relative;
+}
+/* Opcional: estilizar el scroll */
+.modal-content::-webkit-scrollbar {
+  width: 8px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.modal-content::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.modal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6); /* oscurece la imagen */
+}
+.modal-content {
+  position: relative; /* asegura que quede encima del overlay */
+  z-index: 1;
+}
+
+.modal-content img {
+  width: 70%;
+  border-radius: 8px;
+}
+#close-modal {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+/*Footer */
+footer {
+  background: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
